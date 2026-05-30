@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
       "issuedBy": "user_123",
     });
 
-    debugPrint("🚀 Command sent: ${newRef.key}");
+    debugPrint("Command sent: ${newRef.key}");
   }
 
   @override

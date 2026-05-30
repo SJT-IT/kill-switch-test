@@ -61,7 +61,9 @@ class CommandCard extends StatelessWidget {
 
     final status = latest['status'] ?? "unknown";
 
-    final bool isActive = latest['value'] ?? false;
+    final bool isActive = status.toString().toLowerCase() == "received"
+        ? (latest['value'] ?? false)
+        : !(latest['value'] ?? false);
 
     final sentTime = formatTimestamp(latest['senttimestamp']);
 
